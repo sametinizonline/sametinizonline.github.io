@@ -3,13 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkımda</title>
+    <title>Hakkımda - Samet Bayındır</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ffffff;
+        }
+
+        .nav-bar {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        .bio {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #bbb;
+            margin-top: 20px;
+        }
+
+        .bio strong {
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="nav-bar">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="projects.html">Projeler</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">İletişim</a>
+    </div>
+
     <div class="container">
         <h1>Hakkımda</h1>
-        <p>Ben Samet Bayındır. Yapay zeka geliştiricisi olmayı hedefleyen bir yazılımcıyım. Kırşehir'in Mucur ilçesinde yaşıyorum ve teknolojiyi keşfetmeyi seviyorum.</p>
+        <div class="bio">
+            <p><strong>Merhaba, Ben Samet BAYINDIR!</strong></p>
+            <p>Kırşehir'in Mucur ilçesinde yaşamaktayım, 13 Haziran 2001 doğumluyum. Yazılım geliştirme ve yapay zeka üzerine tutkulu bir yazılımcıyım.</p>
+            <p>Teknolojiyi seviyorum ve sürekli yeni şeyler öğrenmeye çalışıyorum. Amacım, teknolojiyi daha iyi bir dünyaya dönüştürmek. Bu siteyi, projelerimi ve yazılarımı paylaşmak için kurdum. Geliştirdiğim projelerde <strong>yapay zeka, makine öğrenmesi ve derin öğrenme</strong> teknolojilerine odaklanıyorum.</p>
+        </div>
     </div>
+
 </body>
 </html>

@@ -3,10 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog | Samet Bayındır</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 32px;
+            color: #FF6347;
+        }
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .post {
+            background: rgba(50, 50, 50, 0.8);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .post h2 {
+            font-size: 24px;
+            color: #FF6347;
+        }
+        .post p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .read-more {
+            color: #FF6347;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Blog</h1>
-    <p>Burada yazılarımı paylaşacağım.</p>
+    <div class="nav-bar">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="projects.html">Projeler</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">İletişim</a>
+    </div>
+    <div class="container">
+        <h1>Blog</h1>
+        
+        <!-- Giriş Metni -->
+        <div class="intro-text">
+            <p>Merhaba, ben Samet Bayındır. Bu blogda, yazılım geliştirme, yapay zeka, makine öğrenmesi, teknoloji trendleri ve daha birçok konuyu derinlemesine inceleyeceğim. Teknolojinin her geçen gün daha hızlı geliştiği bu dönemde, öğrenmek ve paylaşmak her zamankinden daha önemli hale geldi. Amacım, bu blogu hem teknik hem de ilgi duyan herkes için değerli bilgilerle doldurmak.</p>
+            
+            <p>Blog yazılarımda, yeni teknolojiler, yazılım geliştirme süreçleri, karşılaştığım zorluklar ve bunları nasıl aştığım gibi deneyimlerimi paylaşacağım. Ayrıca, yapay zeka ve makine öğrenmesi gibi konularda derinlemesine analizler yaparak, bu teknolojilerin geleceğini ve potansiyel uygulama alanlarını ele alacağım.</p>
+
+            <p>Blog yazılarımda sizleri bilgilendirmek, ilham vermek ve birlikte bu harika dünyayı keşfetmek istiyorum. Yeni yazılarımı kaçırmamak için blogu takip etmeyi unutmayın!</p>
+        </div>
+
+        <!-- Blog Yazısı 1 -->
+        <div class="post">
+            <h2>Yapay Zeka: Geleceğin Teknolojisi</h2>
+            <p>Yapay zeka, günümüzde birçok sektörde devrim yaratmakta. Özellikle sağlık, finans ve otomotiv sektörlerinde büyük yenilikler yapılıyor. Bu yazımda, yapay zekanın potansiyelini ve gelecekteki etkilerini keşfedeceğiz.</p>
+            <a href="#" class="read-more">Devamını oku...</a>
+        </div>
+
+        <!-- Blog Yazısı 2 -->
+        <div class="post">
+            <h2>Makine Öğrenmesinin Temelleri</h2>
+            <p>Makine öğrenmesi, bilgisayarların verilerden öğrenerek belirli görevleri yerine getirmesine olanak tanır. Bu yazımda, makine öğrenmesinin temellerini ve hangi alanlarda kullanıldığını anlatacağım.</p>
+            <a href="#" class="read-more">Devamını oku...</a>
+        </div>
+
+        <!-- Blog Yazısı 3 -->
+        <div class="post">
+            <h2>Veri Bilimi ile Geleceği Şekillendirmek</h2>
+            <p>Veri bilimcileri, büyük veri kümeleri üzerinde analizler yaparak işletmelere değerli bilgiler sunar. Bu yazıda, veri biliminin iş dünyasında nasıl devrim yarattığına dair örnekler sunacağım.</p>
+            <a href="#" class="read-more">Devamını oku...</a>
+        </div>
+        
+    </div>
 </body>
 </html>
