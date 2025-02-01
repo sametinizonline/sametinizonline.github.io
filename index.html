@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel Web Sitesi</title>
+    <title>Samet Bayındır</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -11,80 +11,52 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?technology,futuristic') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            animation: fadeInBody 1.5s ease-in-out;
+            background: #121212;
+            color: white;
         }
         .container {
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            animation: slideIn 1s ease-in-out;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
         h1 {
-            color: #222;
-            font-weight: 700;
+            font-size: 32px;
+            color: #ffffff;
         }
-        p {
-            color: #444;
-            font-size: 18px;
-            font-weight: 400;
+        .nav-bar {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 6px solid #fff;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.4s ease-in-out;
-        }
-        .profile-img:hover {
-            transform: scale(1.1);
-        }
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 14px 28px;
+        .nav-bar a {
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            color: white;
-            border-radius: 12px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+            padding: 10px 20px;
+            transition: background 0.3s;
         }
-        .links a:hover {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            transform: scale(1.1);
-            box-shadow: 0 7px 20px rgba(255, 117, 140, 0.5);
-        }
-        @keyframes fadeInBody {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .nav-bar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="projects.html">Projeler</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">İletişim</a>
+    </div>
     <div class="container">
-        <img src="https://via.placeholder.com/160" alt="Profil Resmi" class="profile-img">
-        <h1>Merhaba, Ben Kırşehir'in Mucur İlçesinden<br> SAMET BAYINDIR</h1>
+        <h1>Merhaba, ben Samet Bayındır</h1>
         <p>Yapay zeka geliştiricisi olmayı hedefleyen bir yazılımcıyım.</p>
-        <div class="links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="https://www.instagram.com/sametinizonline" target="_blank">Instagram</a>
-        </div>
     </div>
 </body>
 </html>
