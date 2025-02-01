@@ -11,56 +11,79 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: url('https://source.unsplash.com/1600x900/?technology,futuristic') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            animation: fadeInBody 1.5s ease-in-out;
         }
         .container {
             max-width: 600px;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-in-out;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-in-out;
         }
         h1 {
-            color: #333;
-            font-weight: 600;
+            color: #222;
+            font-weight: 700;
         }
         p {
-            color: #555;
+            color: #444;
             font-size: 18px;
+            font-weight: 400;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 6px solid #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease-in-out;
+        }
+        .profile-img:hover {
+            transform: scale(1.1);
         }
         .links a {
             display: inline-block;
             margin: 10px;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
             font-weight: bold;
-            background: #007bff;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
             color: white;
-            border-radius: 8px;
-            transition: 0.3s;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
         }
         .links a:hover {
-            background: #0056b3;
-            transform: scale(1.05);
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            transform: scale(1.1);
+            box-shadow: 0 7px 20px rgba(255, 117, 140, 0.5);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
+        @keyframes fadeInBody {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Merhaba, Ben Samet</h1>
+        <img src="https://via.placeholder.com/160" alt="Profil Resmi" class="profile-img">
+        <h1>Merhaba, Ben Kırşehir'in Mucur İlçesinden<br> SAMET BAYINDIR</h1>
         <p>Yapay zeka geliştiricisi olmayı hedefleyen bir yazılımcıyım.</p>
         <div class="links">
             <a href="#">GitHub</a>
             <a href="#">LinkedIn</a>
+            <a href="https://www.instagram.com/sametinizonline" target="_blank">Instagram</a>
         </div>
     </div>
 </body>
