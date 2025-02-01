@@ -5,34 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samet Bayındır</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background: #121212;
+            background: black;
             color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
         .container {
             max-width: 800px;
-            margin: 50px auto;
+            margin: auto;
             padding: 20px;
             background: rgba(30, 30, 30, 0.95);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
         }
+
         h1 {
             font-size: 32px;
             color: #ffffff;
         }
+
         .nav-bar {
             background: rgba(30, 30, 30, 0.9);
             padding: 10px;
             display: flex;
             justify-content: center;
             gap: 20px;
+            position: relative;
+            z-index: 2;
         }
+
         .nav-bar a {
             color: white;
             text-decoration: none;
@@ -40,13 +56,64 @@
             padding: 10px 20px;
             transition: background 0.3s;
         }
+
         .nav-bar a:hover {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
         }
+
+        /* Sosyal Medya Butonları */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.3);
+            color: #ffcc00;
+        }
+
+        /* Matrix Efekti */
+        #matrixCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.95);
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Matrix Efekti -->
+    <canvas id="matrixCanvas"></canvas>
+
     <div class="nav-bar">
         <a href="index.html">Ana Sayfa</a>
         <a href="about.html">Hakkımda</a>
@@ -54,9 +121,74 @@
         <a href="blog.html">Blog</a>
         <a href="contact.html">İletişim</a>
     </div>
+
     <div class="container">
         <h1>Merhaba, ben Samet Bayındır</h1>
         <p>Yapay zeka geliştiricisi olmayı hedefleyen bir yazılımcıyım.</p>
+
+        <!-- Sosyal Medya Butonları -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/sametinizonline" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.snapchat.com/add/sametinizonline" target="_blank" title="Snapchat">
+                <i class="fab fa-snapchat"></i>
+            </a>
+            <a href="https://www.facebook.com/sametinizonline" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
     </div>
+
+    <div class="footer">
+        © 2025 Samet Bayındır. Tüm Hakları Saklıdır.
+    </div>
+
+    <script>
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const matrix = letters.split("");
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for (let x = 0; x < columns; x++) {
+            drops[x] = Math.floor(Math.random() * canvas.height / fontSize);
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#0F0"; // Yeşil renk
+            ctx.font = fontSize + "px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrix[Math.floor(Math.random() * matrix.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+
+        // Sayfa boyutu değişirse canvas'ı güncelle
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+
 </body>
 </html>
